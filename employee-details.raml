@@ -1,0 +1,17 @@
+#%RAML 1.0
+title: employee-details
+
+types:
+  employee: !include datatypes/employee.raml
+
+
+/employee:
+  get:
+    description: retrive collections of employee detail
+    responses:
+      200:
+        body:
+          application/json:
+            type: employee[]
+            example: !include examples/employeeExampl.raml
+              
